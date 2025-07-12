@@ -4,7 +4,7 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 export default defineConfig(({ mode }) => ({
-  base: mode === "production" ? "/web/" : "/", // 👈 dynamic base
+  base: mode === "production" ? "/web/" : "/", // ✅ THIS IS ESSENTIAL
   server: {
     host: "::",
     port: 8080,
