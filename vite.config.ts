@@ -6,7 +6,7 @@ import { componentTagger } from "lovable-tagger";
 export default defineConfig(({ mode }) => ({
   base: mode === "production" ? "/web/" : "/",
   server: {
-    host: "::",
+    host: true,
     port: 8080,
   },
   plugins: [
@@ -17,5 +17,9 @@ export default defineConfig(({ mode }) => ({
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
+  },
+  build: {
+    outDir: "docs", // Ensures GitHub Pages reads from docs/
+    emptyOutDir: true,
   },
 }));
