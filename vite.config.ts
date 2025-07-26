@@ -20,6 +20,6 @@ export default defineConfig(({ mode }) => ({
   },
   build: {
     outDir: "docs", // Ensures GitHub Pages reads from docs/
-    emptyOutDir: true,
+    emptyOutDir: true,//c
   },
 }));
